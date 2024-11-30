@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='to-do-logo.png') }}" alt="App Logo" class="logo"></a>
+                <span>To-Do</span>
+            </div>
+            <div class="nav-right">
+                 <!-- Dropdown Menu -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <img src="{{ url_for('static', filename='profile-pic.jpg') }}" alt="Profile" class="profile-pic">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('account') }}">Account Settings</a>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Feedback</h1>
+        <p>Your feedback is important to us. Please share your thoughts, suggestions, and comments below.</p>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='to-do-logo.png') }}" alt="App Logo">
+                <p>Your Productivity Partner</p>
+            </div>
+            <div class="footer-links">
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms of Service</a>
+                <a href="{{ url_for('about') }}">About To-Do</a>
+                <a href="{{ url_for('feedback') }}">Provide Feedback</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/jumoyz" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/jumoyz" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/jumoyz13" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="footer-credit">&copy; {{ year }} To-Do App. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

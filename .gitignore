@@ -1,0 +1,20 @@
+# Environment and build files
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Deployment files
+*.env
+instance/
+
+# Static files and IDE settings
+*.log
+*.sqlite3
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+*.egg
+*.egg-info

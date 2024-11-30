@@ -1,0 +1,333 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+header .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-pic-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+/* Add a hover effect for profile picture */
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+header .dropdown-content {
+    display: none;
+    position: absolute;
+    /*top: 50px; /* Adjust depending on the profile-pic size */
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    overflow: hidden;
+}
+
+header .dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+}
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show the dropdown menu on hover or click */
+.dropdown:hover .dropdown-content,
+.dropbtn:focus + .dropdown-content {
+    display: block;
+}
+
+/* For smaller screens, dropdown adapt as follows */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .dropdown-content {
+        right: 10;
+        left: auto;
+        min-width: 120px;
+        top: 40px; /* Adjust based on profile-pic size */
+        min-width: 120px; /* Ensure sufficient width for items */
+        font-size: 14px; /* Smaller text size for compact view */
+    }
+
+    /* Dropdown menu links */
+    .dropdown-content a {
+        padding: 8px 10px; /* Compact padding for small screens */
+    }
+}
+
+/* Main Section Styling */
+main {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: none;
+}
+
+main ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+main ul li:last-child {
+    border-bottom: none;
+}
+
+main ul li .task-icons {
+    display: flex;
+    align-items: center;
+}
+
+main ul li .task-icons i {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main ul li .actions i {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main ul li .actions i:hover {
+    color: #007bff;
+}
+
+main section p {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+/* to remove */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+        margin: 10px;
+    }
+
+    input, button {
+        font-size: 0.9em;
+    }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #1abc9c;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #ecf0f1;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #1abc9c;
+}
+
+.footer-credit {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #bdc3c7;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links, .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+

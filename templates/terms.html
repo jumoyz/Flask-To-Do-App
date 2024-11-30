@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='to-do-logo.png') }}" alt="App Logo" class="logo"></a>
+                <span>To-Do</span>
+            </div>
+            <div class="nav-right">
+                 <!-- Dropdown Menu -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <img src="{{ url_for('static', filename='profile-pic.jpg') }}" alt="Profile" class="profile-pic">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('account') }}">Account Settings</a>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Terms of Service</h1>
+        <p>Last updated: Saturday, November 30, 2024</p>
+        <section>
+            <h2>1. Introduction</h2>
+            <p>By using the To-Do App, you agree to the following terms and conditions.</p>
+        </section>
+
+        <section>
+            <h2>2. User Responsibilities</h2>
+            <p>You are responsible for maintaining the confidentiality of your account information and for all activities under your account.</p>
+        </section>
+
+        <section>
+            <h2>3. Usage Rules</h2>
+            <ul>
+                <li>You may not use the app for unlawful purposes.</li>
+                <li>You agree to follow all applicable laws and regulations when using the app.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Limitation of Liability</h2>
+            <p>We are not liable for any damages that occur from the use or inability to use the app, including indirect or consequential damages.</p>
+        </section>
+
+        <section>
+            <h2>5. Termination</h2>
+            <p>We may suspend or terminate your access to the app at any time for violations of these terms.</p>
+        </section>
+
+        <section>
+            <h2>6. Changes to the Terms</h2>
+            <p>We reserve the right to update these terms at any time. Any changes will be posted on this page with the updated date.</p>
+        </section>
+
+        <section>
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at <a href="mailto:jumoyz@gmail.com">jumoyz@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='to-do-logo.png') }}" alt="App Logo">
+                <p>Your Productivity Partner</p>
+            </div>
+            <div class="footer-links">
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms of Service</a>
+                <a href="{{ url_for('about') }}">About To-Do</a>
+                <a href="{{ url_for('feedback') }}">Provide Feedback</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/jumoyz" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/jumoyz" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/jumoyz13" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="footer-credit">&copy; {{ year }} To-Do App. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
